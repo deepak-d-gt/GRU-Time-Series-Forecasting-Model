@@ -4,3 +4,4 @@ joblib
 flask
 mlflow
 PyYAML
+pytest
