@@ -8,3 +8,5 @@ mlruns/
 project.log
 
 .vscode/
+
+.env
