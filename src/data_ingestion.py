@@ -1,6 +1,7 @@
 import pandas as pd
 from src.logger import logger
 import os
+import numpy as np
 
 def load_data():
     logger.info("Loading data by logger")
