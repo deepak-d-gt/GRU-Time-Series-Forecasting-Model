@@ -10,3 +10,5 @@ project.log
 .vscode/
 
 .env
+
+postgresql_to_powerbi.txt
