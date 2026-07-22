@@ -12,3 +12,5 @@ project.log
 .env
 
 postgresql_to_powerbi.txt
+
+airflow.txt
