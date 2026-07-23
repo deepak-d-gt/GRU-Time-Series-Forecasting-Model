@@ -1,0 +1,43 @@
+Prefect :
+
+1) pip install prefect
+
+2) code replac ein main.py
+
+from prefect import task, flow
+
+@task
+def load():
+    return load_data()
+
+@task
+def preprocess(data):
+    return preprocess_data(data)
+
+@task
+def train(X_train, y_train):
+    return train_model(X_train, y_train)
+
+@task
+def evaluate(model, X_test, y_test):
+    evaluate_model(model, X_test, y_test)
+
+@flow
+def gru_pipeline():
+
+    data = load()
+
+    X_train, X_test, y_train, y_test = preprocess(data)
+
+    model = train(X_train, y_train)
+
+    evaluate(model, X_test, y_test)
+
+if __name__ == "__main__":
+    gru_pipeline()
+
+3) Run python main.py or prefect server start
+
+4) http://127.0.0.1:4200
+
+5) finally the ui will open and show the runs
