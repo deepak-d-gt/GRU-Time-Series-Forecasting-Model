@@ -1,0 +1,80 @@
+Ml Workflow Github Actions:
+
+ - can automate tool.
+
+ - yml file have key value pair.
+
+ - should be created only in yaml file.
+
+ - Github actions is better than jenkins in infrastructure.
+
+ - In Jenkins, we need separate server to execute the jobs/tasks.
+
+ - but in the github Actions, there is a virtual server(machine) which execute the jobs/ tasks.
+ After the tasks completed, the virtual server(machine) will terminate itself. So it is better than jenkins.
+
+ - This virtual machine is called a runner.
+
+
+
+Terminology :
+
+1)Events
+
+2)Steps
+
+3)Jobs 
+
+4)Runner - In Github Actions, a runner is the machine(server, VM or container) that executes the jobs in your workflow.
+
+Note : Is github actions is free to all? No.
+For the public repositories - github actions free for unlimited minutes.
+For the private repositories - 2000 minutes / month is free and beyond that is cost.
+To avoid this cost, we can use our own server, if own server you have.This is called self hosted server.
+
+
+5)Actions
+
+
+Workflow :
+
+
+
+
+Workflow Implementation :
+
+1) name - need to specify the name of the workflow
+
+2) jobs - create multiple jobs. eg: build job, deploy job.
+
+3) | = pipeline
+
+4) run - run mulitple commands
+
+5) on(trigger)
+
+6)runs-on(in which machine need to execute - ubuntu)
+in every job there is a runs-on.
+
+6)steps - there will multiple steps in each step.
+
+
+example code:
+
+name: "ml_pipeline"
+
+on:  workflow-dispatch
+
+jobs:
+  job:  build
+  runs-on:  ubuntu:latest
+  steps:  
+
+  job: deploy
+  runs-on: ubuntu:latest
+  steps:
+    - name: print a greeting
+      run:  echo "Hello"
+
+
+

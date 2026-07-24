@@ -9,6 +9,7 @@ from src.config import load_config
 def preprocess_data(data):
 
     print("Preprocessing data...")
+    
 
     config = load_config()
 
